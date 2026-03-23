@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f4f6; 
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh; 
+    color: #374151;
+}
+
+body > div:first-of-type {
+    background: #ffffff;
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 16px; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+#inputArea {
+    flex: 1; 
+    padding: 14px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease; 
+}
+
+
+#inputArea:focus {
+    border-color: #6366f1; 
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+#addBtn {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#addBtn:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px); 
+}
+
+#addBtn:active {
+    transform: translateY(0); 
+}
+
+
+
+#main {
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+
+#main > div {
+    background: #ffffff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+
+#main > div:hover {
+    background-color: #fee2e2; 
+    transform: scale(1.02); 
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.2);
+}
+
+
+#main > div p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f2937;
+    transition: color 0.3s ease;
+    width: 100%;
+    word-break: break-word; 
+}
+
+#main > div:hover p {
+    color: #b91c1c; 
+}
+
+#main > div::after {
+    content: "Silmek için tıkla";
+    position: absolute;
+    right: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ef4444;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+#main > div:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
